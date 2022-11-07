@@ -1,0 +1,55 @@
+[2022-11-06T13:50:28.765] [ERROR] error - Ocurrió un error al intentar obtener al administrador con id NaN: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T14:47:33.272] [ERROR] error - Ocurrió un error al intentar modificar los datos del administrador con id 11: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T14:50:30.807] [ERROR] error - Ocurrió un error al intentar autenticar tu usuario: JsonWebTokenError: invalid token
+[2022-11-06T15:13:33.486] [ERROR] error - No se encontró usuario con el username teresa@maca.com
+[2022-11-06T15:14:19.831] [ERROR] error - No se encontró usuario con el username lu@maca.comaf
+[2022-11-06T15:25:43.202] [ERROR] error - Ocurrió un error al intentar modificar los datos del producto con id 150: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T15:26:43.705] [ERROR] error - Ocurrió un error al intentar modificar los datos del producto con id 150: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T15:26:56.601] [ERROR] error - Ocurrió un error al intentar modificar los datos del producto con id 1500: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T15:27:11.712] [ERROR] error - Ocurrió un error al intentar modificar los datos del producto con id 1500: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T16:00:16.176] [ERROR] error - Ocurrió un error al intentar autenticar tu usuario: TokenExpiredError: jwt expired
+[2022-11-06T16:00:37.693] [ERROR] error - Ocurrió un error al intentar modificar los datos de la categoría con id 7: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T16:02:05.700] [ERROR] error - Ocurrió un error al intentar modificar los datos de la categoría con id 5: ReferenceError: categoria is not defined
+[2022-11-06T16:02:27.077] [ERROR] error - Ocurrió un error al intentar modificar los datos de la categoría con id 5: ReferenceError: categoria is not defined
+[2022-11-06T16:21:21.529] [ERROR] error - Ocurrió un error al intentar obtener al administrador con id NaN: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T16:22:14.876] [ERROR] error - Ocurrió un error al intentar obtener al administrador con id NaN: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T16:22:24.254] [ERROR] error - Ocurrió un error al intentar obtener al administrador con id NaN: TypeError: Cannot read properties of undefined (reading 'length')
+[2022-11-06T16:52:44.165] [ERROR] error - Ocurrió un error al intentar autenticar tu usuario: TokenExpiredError: jwt expired
+[2022-11-06T17:02:09.935] [ERROR] error - Ocurrió un error al intentar autenticar tu usuario: TokenExpiredError: jwt expired
+[2022-11-06T17:04:43.177] [ERROR] error - Ocurrió un error al intentar autenticar tu usuario: TokenExpiredError: jwt expired
+[2022-11-06T17:18:07.997] [ERROR] error - Ocurrió un error al intentar autenticar tu usuario: JsonWebTokenError: invalid token
+[2022-11-07T14:31:33.872] [ERROR] error - Ocurrió un error al intentar autenticar tu usuario: TokenExpiredError: jwt expired
+[2022-11-07T14:37:11.206] [ERROR] error - Ocurrió un error al intentar almacenar la orden en la base de datos: ValidationError: precioFinal: Path `precioFinal` is required., productos.0.precioTotal: Path `precioTotal` is required., productos.1.precioTotal: Path `precioTotal` is required.
+[2022-11-07T14:37:14.485] [ERROR] error - Ocurrió un error al enviar el correo electrónico: Error: Invalid login: 535 Authentication failed
+[2022-11-07T14:38:50.327] [ERROR] error - Ocurrió un error al intentar almacenar la orden en la base de datos: ValidationError: precioFinal: Path `precioFinal` is required., productos.0.precioTotal: Path `precioTotal` is required., productos.1.precioTotal: Path `precioTotal` is required.
+[2022-11-07T14:38:52.634] [ERROR] error - Ocurrió un error al enviar el correo electrónico: Error: Invalid login: 535 Authentication failed
+[2022-11-07T14:39:26.802] [ERROR] error - Ocurrió un error al intentar almacenar la orden en la base de datos: ValidationError: precioFinal: Path `precioFinal` is required., productos.0.precioTotal: Path `precioTotal` is required., productos.1.precioTotal: Path `precioTotal` is required.
+[2022-11-07T14:39:29.109] [ERROR] error - Ocurrió un error al enviar el correo electrónico: Error: Invalid login: 535 Authentication failed
+[2022-11-07T14:40:15.461] [ERROR] error - Ocurrió un error al intentar almacenar la orden en la base de datos: ValidationError: precioFinal: Path `precioFinal` is required., productos.0.precioTotal: Path `precioTotal` is required., productos.1.precioTotal: Path `precioTotal` is required.
+[2022-11-07T14:40:17.782] [ERROR] error - Ocurrió un error al enviar el correo electrónico: Error: Invalid login: 535 Authentication failed
+[2022-11-07T14:51:03.573] [ERROR] error - Ocurrió un error al enviar el correo electrónico: Error: Invalid login: 535 Authentication failed
+[2022-11-07T14:55:24.257] [ERROR] error - Ocurrió un error al enviar el correo electrónico: Error: Invalid login: 535 Authentication failed
+[2022-11-07T14:55:57.354] [ERROR] error - Ya existe un usuario con ese correo electrónico o te faltó completar algún campo
+[2022-11-07T14:58:08.075] [ERROR] error - El id ingresado no es válido
+[2022-11-07T14:58:27.577] [ERROR] error - Ocurrió un error al intentar autenticar tu usuario: JsonWebTokenError: invalid signature
+[2022-11-07T14:59:16.810] [ERROR] error - Ocurrió un error al intentar autenticar tu usuario: JsonWebTokenError: invalid signature
+[2022-11-07T14:59:32.265] [ERROR] error - Ocurrió un error al intentar almacenar la categoría en la base de datos: ValidationError: categoria: Path `categoria` is required.
+[2022-11-07T14:59:59.915] [ERROR] error - Ocurrió un error al intentar almacenar la categoría en la base de datos: ValidationError: categoria: Path `categoria` is required.
+[2022-11-07T15:01:12.768] [ERROR] error - Ocurrió un error al intentar almacenar la categoría en la base de datos: ValidationError: categoria: Path `categoria` is required.
+[2022-11-07T15:01:41.481] [ERROR] error - Ocurrió un error al intentar almacenar la categoría en la base de datos: ValidationError: categoria: Path `categoria` is required.
+[2022-11-07T15:02:33.965] [ERROR] error - Ocurrió un error al intentar eliminar la categoría con id NaN en la base de datos: CastError: Cast to Number failed for value "NaN" (type number) at path "id" for model "categorias"
+[2022-11-07T15:02:33.965] [ERROR] error - Ocurrió un error al intentar eliminar la categoría con id NaN: TypeError: Cannot read properties of undefined (reading 'modifiedCount')
+[2022-11-07T15:03:59.287] [ERROR] error - Ocurrió un error al intentar almacenar el producto en la base de datos: ValidationError: nombre: Path `nombre` is required., categoria: Path `categoria` is required.
+[2022-11-07T15:05:19.541] [ERROR] error - Ocurrió un error al intentar almacenar el producto en la base de datos: ValidationError: nombre: Path `nombre` is required., categoria: Path `categoria` is required.
+[2022-11-07T15:05:30.797] [ERROR] error - Ocurrió un error al intentar almacenar el producto en la base de datos: ValidationError: categoria: Path `categoria` is required.
+[2022-11-07T15:06:16.053] [ERROR] error - Ocurrió un error al intentar almacenar el producto en la base de datos: ValidationError: categoria: Path `categoria` is required.
+[2022-11-07T15:06:29.670] [ERROR] error - Ocurrió un error al intentar almacenar el producto en la base de datos: ValidationError: categoria: Path `categoria` is required.
+[2022-11-07T15:07:38.599] [ERROR] error - Ocurrió un error al intentar modificar los datos del producto con id NaN: CastError: Cast to Number failed for value "NaN" (type number) at path "id" for model "productos"
+[2022-11-07T15:08:13.399] [ERROR] error - Ocurrió un error al intentar eliminar el producto con id NaN en la base de datos: CastError: Cast to Number failed for value "NaN" (type number) at path "id" for model "productos"
+[2022-11-07T15:08:13.399] [ERROR] error - Ocurrió un error al intentar eliminar el producto con id NaN: TypeError: Cannot read properties of undefined (reading 'modifiedCount')
+[2022-11-07T15:30:56.344] [ERROR] error - Ocurrió un error al enviar el correo electrónico: Error: Invalid login: 535 Authentication failed
+[2022-11-07T15:32:59.375] [ERROR] error - Ocurrió un error al enviar el correo electrónico: Error: Invalid login: 535 Authentication failed
+[2022-11-07T15:56:47.507] [ERROR] error - Ocurrió un error al intentar obtener los productos pertenecientes a la categoría zapatillas: ReferenceError: id is not defined
+[2022-11-07T15:57:11.328] [ERROR] error - Ocurrió un error al intentar obtener los productos pertenecientes a la categoría Zapatillas: ReferenceError: id is not defined
+[2022-11-07T15:57:46.333] [ERROR] error - Ocurrió un error al intentar obtener los productos pertenecientes a la categoría Zapatillas: ReferenceError: id is not defined
+[2022-11-07T15:58:10.495] [ERROR] error - Ocurrió un error al intentar obtener los productos pertenecientes a la categoría Zapatillas: ReferenceError: id is not defined
