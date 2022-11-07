@@ -35,11 +35,11 @@ const getOrdersByUserId = async (req, res) => {
 
 
 const createOrder = async (req, res) => {
-
     if (req.session.passport.user) {
         const {productos} = req.body;
         const {id, nombre, username, telefono, direccion} = req.session.passport.user;
 
+        // Creación del objeto comprador
         const comprador = {
             id_comprador: id,
             nombre,
@@ -48,22 +48,27 @@ const createOrder = async (req, res) => {
             username
         };
 
-        let totales = []
-        productos.map(p => totales.push(p.cantidad * p.precio));
-        let precioFinal = totales.reduce((acum, valor) => acum + valor, 0);
+        // Función para establecer el precio total de la orden
+        const total = () => {
+            let totales = []
+            productos.map(p => totales.push(p.cantidad * p.precio));
+            return totales.reduce((acum, valor) => acum + valor, 0);
+        }
+        const precioFinal = total()
 
-
+        // Creación del objeto orden
         const order = {id: uuid.v4(), comprador, productos, precioFinal};
-        const subject = `Nuevo pedido de ${nombre} - ${username}`;
-        let messageId;
 
+        // Creación del messageId y de las options del correo electrónico
+        let messageId;
         const mailOptions = {
             from: `Mecha Calzados <${process.env.NODEMAILER_USER}>`,
             to: `${nombre} <${username}>, Mecha Calzados <${process.env.NODEMAILER_USER}>`,
-            subject: subject,
+            subject: `Nuevo pedido de ${nombre} - ${username}`,
             text: JSON.stringify(productos) 
         };
 
+        // Función del envío del correo electrónico
         transporter.sendMail(mailOptions, (error, info) => {
             if(error) {
                 loggerError.error(`Ocurrió un error al enviar el correo electrónico: ${error}`);
@@ -74,12 +79,18 @@ const createOrder = async (req, res) => {
         
         try {
             const result = await classOrders.createOrder(order);
+
+            if (result != undefined) {
+                res.status(200).json({
+                    "Status": "Ok",
+                    "Orden": result,
+                    "Correo electrónico": messageId
+                });
+            } else {
+                loggerError.error(`Ocurrió un error al intentar crear el pedido: ${error}`);
+                res.status(500).json(`Ocurrió un error al intentar crear el pedido: ${error}`);
+            }
             
-            res.status(200).json({
-                "Status": "Ok",
-                "Orden": result,
-                "Correo electrónico": messageId
-            });
         } catch (error) {
             loggerError.error(`Ocurrió un error al intentar crear el pedido: ${error}`);
             res.status(500).json(`Ocurrió un error al intentar crear el pedido: ${error}`);

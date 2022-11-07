@@ -1,3 +1,4 @@
+// Imports for server config
 require('dotenv').config();
 const express = require('express');
 const app = express();
@@ -10,22 +11,25 @@ require('./middlewares/auth');
 const { log4js } = require('./middlewares/logger');
 const logger = log4js.getLogger();
 const loggerError = log4js.getLogger('error');
+const { mongoConnection } = require('./config/mongoDB');
+
+// Routes imports
 const productsRoute = require('./routes/products');
+const categoriesRoute = require('./routes/categories');
 const registerRoute = require('./routes/register');
 const loginRoute = require('./routes/login');
 const usersRoute = require('./routes/users');
 const orderRoute = require('./routes/orders');
-const categoriesRoute = require('./routes/categories');
-const adminLoginRoute = require('./routes/admin/admin_login');
 const adminRegisterRoute = require('./routes/admin/admin_register');
+const adminLoginRoute = require('./routes/admin/admin_login');
 const adminRoute = require('./routes/admin/admin');
 const adminProductsRoute = require('./routes/admin/admin_products');
 const adminCategoriesRoute = require('./routes/admin/admin_categories');
 const adminOrdersRoute = require('./routes/admin/admin_orders');
 const adminUsersRoute = require('./routes/admin/admin_users');
-const notFoundRoute = require('./routes/main');
-const { mongoConnection } = require('./config/mongoDB');
+const notFoundRoute = require('./routes/not_found');
 
+// Session configuration
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: process.env.SESSION_RESAVE,
@@ -34,23 +38,23 @@ app.use(session({
         maxAge: 60000 || process.env.SESSION_MAXAGE
     }
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 
+// App configuration
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
 
-
-app.use(passport.initialize());
-app.use(passport.session());
-
+// Routes implementations
 app.use("/products", productsRoute);
+app.use("/categories", categoriesRoute);
 app.use("/register", registerRoute);
 app.use("/login", loginRoute);
 app.use("/user", usersRoute);
 app.use("/order", orderRoute);
-app.use("/categories", categoriesRoute);
-app.use("/admin/login", adminLoginRoute);
 app.use("/admin/register", adminRegisterRoute);
+app.use("/admin/login", adminLoginRoute);
 app.use("/admin", adminRoute);
 app.use("/admin/product", adminProductsRoute);
 app.use("/admin/category", adminCategoriesRoute);
@@ -58,6 +62,7 @@ app.use("/admin/orders", adminOrdersRoute);
 app.use("/admin/users", adminUsersRoute);
 app.use("/*", notFoundRoute);
 
+// Server connection
 app.listen(process.env.PORT || PORT, async () => {
     await mongoConnection();
     

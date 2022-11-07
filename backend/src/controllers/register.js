@@ -6,8 +6,9 @@ const loggerError = log4js.getLogger('error');
 const register = (req, res) => {
     if (req.session.passport.user) {
         const {id, nombre, direccion, telefono, username} = req.session.passport.user;
-        let messageId;
 
+        // Creación del messageId y de las options del correo electrónico
+        let messageId;
         const mailOptions = {
             from: `Mecha Calzados <${process.env.NODEMAILER_USER}>`,
             to: `Mecha Calzados <${process.env.NODEMAILER_USER}>`,
@@ -15,6 +16,7 @@ const register = (req, res) => {
             text: `Se registró el usuario ${nombre}, cuyo correo electrónico es ${username}.` 
         };
 
+        // Función del envío del correo electrónico
         transporter.sendMail(mailOptions, (error, info) => {
             if(error) {
                 loggerError.error(`Ocurrió un error al enviar el correo electrónico: ${error}`);
@@ -22,7 +24,6 @@ const register = (req, res) => {
             }
             return messageId = info.messageId;
         });
-
 
         res.status(200).json({
             "Status": "Ok",

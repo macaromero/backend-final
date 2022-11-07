@@ -1,6 +1,6 @@
 const classP = require("../models/DAO/products");
 const classProducts = new classP;
-const {log4js} = require('../middlewares/logger');
+const { log4js } = require('../middlewares/logger');
 const loggerError = log4js.getLogger('error');
 const loggerWarning = log4js.getLogger('warn');
 

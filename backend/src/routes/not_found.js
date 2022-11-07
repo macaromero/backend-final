@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { notFound } = require("../controllers/main");
+const { notFound } = require("../controllers/not_found");
 
 router.get('/', notFound);
 router.post('/', notFound);
